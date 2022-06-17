@@ -17,7 +17,7 @@ The app is deployed to GitHub pages and available [here](https://eliselarooy.git
 
 ## API
 
-This app uses a single endpoint from the [The Cat API](_https://thecatapi.com/_). A GET request to https://api.thecatapi.com/v1/breeds returns a list of all breeds. Each breed has a unique 4-character id which is used to populate the dropdown.
+This app uses a single endpoint from [The Cat API](https://thecatapi.com/). A GET request to https://api.thecatapi.com/v1/breeds returns a list of all breeds. Each breed has a unique 4-character id which is used to populate the dropdown.
 
 ## Breed Card
 
