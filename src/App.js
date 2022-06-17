@@ -1,24 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import React, { useState, useEffect } from 'react';
+import { getBreeds } from './api/api';
+
+import Form from './components/form/Form';
 
 function App() {
+  const [breeds, setBreeds] = useState(null);
+
+  const getData = async () => {
+    try {
+      const data = await getBreeds();
+      setBreeds(data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  console.table('Breeds', breeds);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Cat App</h1>
+      <Form data={breeds} />
+    </>
   );
 }
 
