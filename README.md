@@ -1,8 +1,10 @@
 # Cat App
 
-A React application using a public cat API.
-
 ![screenshot](./assets/screenshot.png)
+
+## Overview
+
+A React application using a public cat API.
 
 **Technologies:** React, Material UI, Axios, Postman
 
