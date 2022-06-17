@@ -15,7 +15,7 @@ The app is deployed to GitHub pages and available [here](https://eliselarooy.git
 - Clone this repository onto your machine.
 - Use `npm install` to install all dependencies from the package.json file.
 - Get a free API key from [The Cat API](https://thecatapi.com/) and add APIKEY=\<your API key\> to a .env file in the root folder.
-- Run `npm start` in the root folder.
+- Run `npm start` in the root folder. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## API
 
