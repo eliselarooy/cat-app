@@ -1,6 +1,6 @@
 # Cat App
 
-![screenshot](./assets/screenshot.png)
+![screenshot](./screenshot.png)
 
 ## Overview
 
