@@ -1,14 +1,14 @@
+import React, { useState, useEffect } from 'react';
+import { Typography } from '@mui/material';
+import { getBreeds } from './api/catApi';
+import BreedCard from './components/BreedCard';
+import Form from './components/Form';
+
 import './App.css';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import React, { useState, useEffect } from 'react';
-import { getBreeds } from './api/api';
-
-import Form from './components/Form';
-import BreedCard from './components/BreedCard';
-import { Typography } from '@mui/material';
 
 function App() {
   const [breeds, setBreeds] = useState(null);
@@ -29,7 +29,9 @@ function App() {
 
   return (
     <>
-      <Typography variant="h1">Cat App</Typography>
+      <Typography variant="h1" sx={{ m: 1 }}>
+        Cat App
+      </Typography>
       <Form data={breeds} selected={selected} setSelected={setSelected} />
       {selected && <BreedCard data={selected} />}
     </>

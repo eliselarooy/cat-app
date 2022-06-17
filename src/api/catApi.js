@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { api_key } from '../config.js';
 
 const baseUrl = 'https://api.thecatapi.com/v1';
 
@@ -7,7 +8,7 @@ export const getBreeds = async () => {
     method: 'GET',
     url: `${baseUrl}/breeds`,
     headers: {
-      'x-api-key': '2b372f77-84bd-44db-a50a-2878cc13810b',
+      'x-api-key': `${api_key}`,
     },
   };
 
