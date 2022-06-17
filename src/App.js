@@ -6,10 +6,13 @@ import '@fontsource/roboto/700.css';
 import React, { useState, useEffect } from 'react';
 import { getBreeds } from './api/api';
 
-import Form from './components/form/Form';
+import Form from './components/Form';
+import BreedCard from './components/BreedCard';
+import { Typography } from '@mui/material';
 
 function App() {
   const [breeds, setBreeds] = useState(null);
+  const [selected, setSelected] = useState(null);
 
   const getData = async () => {
     try {
@@ -24,12 +27,11 @@ function App() {
     getData();
   }, []);
 
-  console.table('Breeds', breeds);
-
   return (
     <>
-      <h1>Cat App</h1>
-      <Form data={breeds} />
+      <Typography variant="h1">Cat App</Typography>
+      <Form data={breeds} selected={selected} setSelected={setSelected} />
+      {selected && <BreedCard data={selected} />}
     </>
   );
 }
